@@ -1,0 +1,134 @@
+.admin-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 0;
+  background: var(--light);
+}
+
+.admin-header {
+  margin-bottom: 40px;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.admin-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+}
+
+.admin-section {
+  margin-bottom: 48px;
+}
+
+.subscription-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.subscription-card {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.subscription-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.subscription-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.subscription-card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.users-table {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  background: var(--light);
+  padding: 16px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.users-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  color: var(--dark);
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-admin {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--primary);
+}
+
+.role-user {
+  background: rgba(78, 205, 196, 0.1);
+  color: var(--accent);
+}
+
+.status-active {
+  background: rgba(40, 167, 69, 0.1);
+  color: var(--success);
+}
+
+.status-inactive {
+  background: rgba(108, 117, 125, 0.1);
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .users-table {
+    font-size: 0.85rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 12px 8px;
+  }
+}
